@@ -11,14 +11,8 @@ const Header = () => {
 			<div className={'header'}>
 				<Button onClick={onClose}>Close</Button>
 				<span className={'username'}>
-					{tg.initData}
+					{tg.initData?.username || "Guest"}
 				</span>
-				<div>
-					{tg.initData}
-				</div>
-				<div>
-					{tg.initDataUnsafe}
-				</div>
 			</div>
 	);
 };
