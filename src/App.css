@@ -1,23 +1,20 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-  background: var(--tg-theme-bg-color);
-  color: var(--tg-theme-text-color);
+body {
+    background: var(--tg-theme-bg-color);
+    color: var(--tg-theme-text-color);
 }
 
-.App{
-  width: 100%;
+.App {
+    width: 100%;
 }
-.img{
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-}
-.closeBtn{
-  margin-left: auto;
-  display: block;
+
+
+.closeBtn {
+    margin-left: auto;
+    display: block;
 }
