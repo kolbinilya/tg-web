@@ -5,13 +5,14 @@ import './Header.css'
 
 
 const Header = () => {
-	const {onClose, user} = useTelegram()
+	const {onClose, user, user1} = useTelegram()
 
 	return (
 			<div className={'header'}>
 				<Button onClick={onClose}>Close</Button>
 				<span className={'username'}>
 					{user?.username || "Guest"}
+					{user1?.username || "Guest"}
 				</span>
 			</div>
 	);

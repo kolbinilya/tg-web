@@ -2,11 +2,13 @@ import './App.css';
 import {useEffect} from "react";
 import Header from "./components/Header/Header";
 import {useTelegram} from "./hooks/useTelegram";
+import {Routes, Route} from "react-router-dom";
+import ProductList from "./components/ProductList/ProductList";
+import Form from "./components/Form/Form";
 
 
 function App() {
-	const {tg, onToggleButton} = useTelegram()
-	const url = 'https://www.licious.in/blog/wp-content/uploads/2022/06/shutterstock_1339636625-1.jpg'
+	const {tg} = useTelegram()
 
 	useEffect(() => {
 		tg.ready()
@@ -15,10 +17,10 @@ function App() {
 	return (
 			<div className="App">
 				<Header/>
-				<div className='container'>
-					<img className='img' src={url} alt=""/>
-				</div>
-				<button onClick={onToggleButton}>toggle</button>
+				<Routes>
+					<Route index element={<ProductList/>}/>
+					<Route path={'form'} element={<Form/>}/>
+				</Routes>
 			</div>
 	);
 }
