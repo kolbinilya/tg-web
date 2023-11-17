@@ -13,6 +13,12 @@ const Header = () => {
 				<span className={'username'}>
 					{tg.initData}
 				</span>
+				<div>
+					{tg.initData}
+				</div>
+				<div>
+					{tg.initDataUnsafe}
+				</div>
 			</div>
 	);
 };
